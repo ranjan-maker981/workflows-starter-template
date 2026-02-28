@@ -1,16 +1,28 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-	darkMode: "media", // Automatically follows system preference
-	theme: {
-		extend: {
-			colors: {
-				surface: "#ffffff",
-			},
-			animation: {
-				pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-			},
-		},
-	},
-	plugins: [],
+module.exports = {
+  content: [
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        dk: {
+          primary: '#E63946',
+          secondary: '#1D3557',
+          accent: '#F4A261',
+          dark: '#0F172A',
+          light: '#F8FAFC',
+          success: '#10B981',
+          warning: '#F59E0B',
+          danger: '#EF4444',
+          info: '#3B82F6',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
 };
